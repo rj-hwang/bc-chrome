@@ -1,0 +1,11 @@
+{
+  "name": "BC",
+  "description": "宝城 Chrome App.",
+  "version": "0.1",
+  "app": {
+    "background": {
+      "scripts": ["bc.js"]
+    }
+  },
+  "icons": { "16": "bc-16.png", "128": "bc-128.png" }
+}
