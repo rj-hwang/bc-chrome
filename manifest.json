@@ -1,11 +1,30 @@
 {
-  "name": "BC",
-  "description": "宝城 Chrome App.",
-  "version": "0.1",
-  "app": {
-    "background": {
-      "scripts": ["bc.js"]
-    }
-  },
-  "icons": { "16": "bc-16.png", "128": "bc-128.png" }
+	"name": "BC",
+	"description": "宝城 Chrome App.",
+	"version": "0.1",
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": { "16": "bc-16.png", "128": "bc-128.png" },
+	"permissions": [
+		"usb",
+		{
+			"usbDevices": [
+				{	// Standard OpenHCD USB Host Controller
+					"vendorId": 1022, 
+					"productId": 7808
+				},
+				{	// USB2.0 Camera
+					"vendorId": 7758, 	// 0x1E4E
+					"productId": 258	// 0x0102
+				},
+				{	// Jetion Digital Scanner
+					"vendorId": 2760, 	// 0x0AC8
+					"productId": 13408	// 0x3460
+				}
+			]
+		}
+	]
 }
